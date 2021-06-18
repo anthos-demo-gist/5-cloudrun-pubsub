@@ -1,0 +1,19 @@
+{
+  "name": "cloudrun-from-firestore",
+  "description": "Read from Firestore",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">= 12.0.0"
+  },
+  "author": "Julien Rzeznik",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "express": "^4.16.4",
+    "firebase-admin": "^9.9.0"
+  }
+}
