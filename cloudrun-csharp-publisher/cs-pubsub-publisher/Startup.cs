@@ -57,7 +57,7 @@ namespace cs_pubsub_publisher
             {
                 endpoints.MapGet("/", async context =>
                 {
-                    IEnumerable<string> message = new List<string>() {"Hello GCP, it's " + DateTime.Now.ToString("hh:mm")};
+                    IEnumerable<string> message = new List<string>() {"Hello GCP, it's " + DateTime.Now.ToString("HH:mm")};
                     string project = "gcp-cloud-run-workshop";
                     string topic = "my-pubsub-topic";
                     await this.PublishMessagesAsync(project,topic,message);
