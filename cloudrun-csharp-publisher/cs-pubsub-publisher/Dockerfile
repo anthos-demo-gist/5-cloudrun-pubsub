@@ -25,6 +25,8 @@ RUN dotnet publish -c Release -r alpine-x64 --self-contained true -o out
 # Use Microsoft's official runtime .NET image.
 # https://hub.docker.com/_/microsoft-dotnet-core-aspnet/
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-alpine AS runtime
+
+#Add dependency to fix libgrpc issue at runtime
 RUN echo 'http://dl-cdn.alpinelinux.org/alpine/v3.8/main' >> /etc/apk/repositories && \
     apk update --no-cache && \
     apk add --no-cache bash libc6-compat=1.1.19-r11
