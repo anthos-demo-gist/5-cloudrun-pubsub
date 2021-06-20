@@ -61,8 +61,8 @@ namespace cs_pubsub_publisher
                     string project = "gcp-cloud-run-workshop";
                     string topic = "my-pubsub-topic";
                     await this.PublishMessagesAsync(project,topic,message);
-                    var target = Environment.GetEnvironmentVariable("TARGET") ?? "World";
-                    await context.Response.WriteAsync($"Hi {target}! I just sent a message on pubsub :)\n");
+                    var target = Environment.GetEnvironmentVariable("TARGET") ?? "Google";
+                    await context.Response.WriteAsync($"Hello {target}! I just sent a message on pubsub :)\n");
                 });
             });
         }
