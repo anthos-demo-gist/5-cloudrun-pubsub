@@ -58,10 +58,10 @@ namespace cs_pubsub_publisher
                 endpoints.MapGet("/", async context =>
                 {
                     IEnumerable<string> message = new List<string>() {"Hello GCP, it's " + DateTime.Now.ToString("HH:mm")};
-                    string project = "gcp-cloud-run-workshop";
+                    string project = "aflalo-demo";
                     string topic = "my-pubsub-topic";
                     await this.PublishMessagesAsync(project,topic,message);
-                    var target = Environment.GetEnvironmentVariable("TARGET") ?? "PCIS";
+                    var target = Environment.GetEnvironmentVariable("TARGET") ?? "John Doe";
                     await context.Response.WriteAsync($"Hello {target}! I just sent a message on pubsub :)\n");
                 });
             });

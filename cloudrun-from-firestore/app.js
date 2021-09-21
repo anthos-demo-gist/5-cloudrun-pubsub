@@ -19,7 +19,7 @@ app.get('/', async (req, res) => {
     const messagesRef = db.collection('messages');
     const snapshot = await messagesRef.get();
     snapshot.forEach(doc => {
-        result.push(doc.data())
+        result.push(doc.data());
         console.log(doc.id, '=>', doc.data());
     });
 

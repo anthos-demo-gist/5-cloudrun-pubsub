@@ -28,8 +28,8 @@ import (
 )
 
 func main() {
-	projectID := "anthos-bm-env"
-	topicID := "demoTopic"
+	projectID := "aflalo-demo"
+	topicID := "my-pubsub-topic"
 	nb_messages := 2
 
 	http.HandleFunc("/", func(rw http.ResponseWriter, r *http.Request) { publishThatScales(projectID, topicID, nb_messages) })
